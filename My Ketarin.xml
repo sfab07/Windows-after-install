@@ -1,0 +1,1132 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Jobs>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="46301fac-9730-4041-a2cd-2b7c49eab7af">
+    <SourceTemplate><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Jobs>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <WebsiteUrl />
+    <UserAgent>chocolatey command line</UserAgent>
+    <UserNotes />
+    <LastFileSize>0</LastFileSize>
+    <LastFileDate xsi:nil="true" />
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>Last program version.*?([\d\.]+)</Regex>
+            <Url><placeholder name="Url to search for new version" value="https://github.com/chocolatey/chocolatey-packages-template/blob/master/ketarin/_KetarinChocolateyTemplate.xml" /></Url>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>{getUrl}</TextualContent>
+            <Name>url</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>getUrl</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>[^ "'&lt;&gt;\*]+\.exe</Regex>
+            <Url><placeholder name="Url to search for new version" value="https://github.com/chocolatey/chocolatey-packages-template/blob/master/ketarin/_KetarinChocolateyTemplate.xml" /></Url>
+            <Name>getUrl</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>{getUrl64}</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>getUrl64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>[^ "'&lt;&gt;\*]+\.exe</Regex>
+            <Url><placeholder name="Url to search for new version" value="https://github.com/chocolatey/chocolatey-packages-template/blob/master/ketarin/_KetarinChocolateyTemplate.xml" /></Url>
+            <Name>getUrl64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+
+    <TargetPath>{saveDir}\{appname}_{version}.{url:ext}</TargetPath>
+    <FixedDownloadUrl>{url}</FixedDownloadUrl>
+    <Name><placeholder name="Name of the package (should match the folder under automatic and the nuspec file)." value="" /></Name>
+  </ApplicationJob>
+</Jobs>
+]]></SourceTemplate>
+    <WebsiteUrl />
+    <UserAgent>chocolatey command line</UserAgent>
+    <UserNotes />
+    <LastFileSize>0</LastFileSize>
+    <LastFileDate xsi:nil="true" />
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>Last program version.*?([\d\.]+)</Regex>
+            <Url>https://github.com/chocolatey/chocolatey-packages-template/blob/master/ketarin/_KetarinChocolateyTemplate.xml</Url>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>{getUrl}</TextualContent>
+            <Name>url</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>getUrl</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>[^ "'&lt;&gt;\*]+\.exe</Regex>
+            <Url>https://github.com/chocolatey/chocolatey-packages-template/blob/master/ketarin/_KetarinChocolateyTemplate.xml</Url>
+            <Name>getUrl</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>{getUrl64}</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>getUrl64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>[^ "'&lt;&gt;\*]+\.exe</Regex>
+            <Url>https://github.com/chocolatey/chocolatey-packages-template/blob/master/ketarin/_KetarinChocolateyTemplate.xml</Url>
+            <Name>getUrl64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation />
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated xsi:nil="true" />
+    <TargetPath>{saveDir}\{appname}_{version}.{url:ext}</TargetPath>
+    <FixedDownloadUrl>{url}</FixedDownloadUrl>
+    <Name />
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="fb6aafb3-0a93-4c70-ba88-ab078ab625d7">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>0</LastFileSize>
+    <LastFileDate xsi:nil="true" />
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions>
+      <SetupInstruction xsi:type="StartProcessInstruction">
+        <EnvironmentVariables />
+        <FileName>downloads\</FileName>
+        <Parameters />
+        <WaitForExit>true</WaitForExit>
+      </SetupInstruction>
+    </SetupInstructions>
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>x</Url>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation />
+    <DeletePreviousFile>false</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated xsi:nil="true" />
+    <TargetPath>downloads\</TargetPath>
+    <FixedDownloadUrl>https://www.archifacile.fr/ArchiFacileSetup.exe</FixedDownloadUrl>
+    <Name>ArchiFacile</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="2b82d407-a093-4128-8019-8a6a08a7ad5f">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>147740992</LastFileSize>
+    <LastFileDate>2018-11-24T13:10:54.9107124</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>true</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions>
+      <SetupInstruction xsi:type="StartProcessInstruction">
+        <EnvironmentVariables />
+        <FileName>C:\Users\mitou\Desktop\++installations++\Ketarin\Telechargements\BraveSetup-x64.exe</FileName>
+        <Parameters>/SILENT /DISABLEUPDATES</Parameters>
+        <WaitForExit>true</WaitForExit>
+      </SetupInstruction>
+    </SetupInstructions>
+    <Variables>
+      <item>
+        <key>
+          <string>url</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>brave/browser-laptop/releases/download[^"]+Brave[^"]*Setup-x64.exe</Regex>
+            <Url>https://github.com/brave/browser-laptop/releases/latest</Url>
+            <Name>url</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>https://github.com/brave/browser-laptop/releases/latest</Url>
+            <StartText>/brave/browser-laptop/releases/download/v</StartText>
+            <EndText>/Brave</EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category>Internet</Category>
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Users\mitou\Desktop\++installations++\Ketarin\downloads\BraveSetup-x64.exe</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2018-11-24T13:10:54.9107124</LastUpdated>
+    <TargetPath>downloads\</TargetPath>
+    <FixedDownloadUrl>https://github.com/{url}</FixedDownloadUrl>
+    <Name>Brave Browser</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="bc386e6d-d2fb-4ab1-9b63-a8395998539d">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>0</LastFileSize>
+    <LastFileDate xsi:nil="true" />
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions>
+      <SetupInstruction xsi:type="StartProcessInstruction">
+        <EnvironmentVariables />
+        <FileName>downloads\</FileName>
+        <Parameters />
+        <WaitForExit>true</WaitForExit>
+      </SetupInstruction>
+    </SetupInstructions>
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://www.mtg.sk/rva/</Url>
+            <StartText>&gt;Cathy </StartText>
+            <EndText>&lt;br&gt;(English)&lt;BR&gt;(XP</EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>version+</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://www.mtg.sk/rva/</Url>
+            <StartText>HREF="Cathy</StartText>
+            <EndText>.zip"&gt;Cathy</EndText>
+            <Name>version+</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation />
+    <DeletePreviousFile>false</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated xsi:nil="true" />
+    <TargetPath>downloads\</TargetPath>
+    <FixedDownloadUrl>http://www.mtg.sk/rva/Cathy{version+}.zip</FixedDownloadUrl>
+    <Name>Cathy</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="f44bed37-5a3b-48c1-9080-a4840d4bbf56">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>22501243</LastFileSize>
+    <LastFileDate>2018-12-22T19:34:27.2336264</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions>
+      <SetupInstruction xsi:type="StartProcessInstruction">
+        <EnvironmentVariables />
+        <FileName>downloads\Cherrytree.exe</FileName>
+        <Parameters>/verysilent</Parameters>
+        <WaitForExit>true</WaitForExit>
+      </SetupInstruction>
+    </SetupInstructions>
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://www.giuspen.com/cherrytree/#downl</Url>
+            <StartText>&lt;span class="emphasized"&gt;download last version </StartText>
+            <EndText>&lt;/span&gt;</EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand>ren "{file}" Cherrytree.exe</ExecuteCommand>
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category>Office</Category>
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Users\mitou\Desktop\++installations++\Ketarin\downloads\cherrytree_0.38.7_setup.exe</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2018-12-22T19:34:27.2336264</LastUpdated>
+    <TargetPath>downloads\</TargetPath>
+    <FixedDownloadUrl>http://www.giuspen.com/software/cherrytree_{version}_setup.exe</FixedDownloadUrl>
+    <Name>Cherrytree</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="6fe65136-5698-436f-83ab-23d52f155358">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>1547115</LastFileSize>
+    <LastFileDate>2018-11-06T15:28:30.5119909</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions>
+      <SetupInstruction xsi:type="StartProcessInstruction">
+        <EnvironmentVariables />
+        <FileName>downloads\Mp3Ripper.exe</FileName>
+        <Parameters>/verysilent</Parameters>
+        <WaitForExit>true</WaitForExit>
+      </SetupInstruction>
+    </SetupInstructions>
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://www.freecdtomp3.com/mp3_ripper.html</Url>
+            <StartText>  &lt;li&gt;V.</StartText>
+            <EndText>:</EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand>Expand-Archive -Path downloads\Mp3Ripper.zip -DestinationPath downloads</ExecuteCommand>
+    <ExecutePreCommand />
+    <ExecuteCommandType>PowerShell</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category>CD/DVD</Category>
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Users\mitou\Desktop\++installations++\Ketarin\downloads\Mp3Ripper.zip</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2018-11-06T15:28:30.5119909</LastUpdated>
+    <TargetPath>downloads\</TargetPath>
+    <FixedDownloadUrl>http://www.freecdtomp3.com/Downloads/Mp3Ripper.zip</FixedDownloadUrl>
+    <Name>MP3 Ripper</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="1b6272b2-cd17-4f06-850a-ee73843f29c9">
+    <WebsiteUrl>http://www.flos-freeware.ch/notepad2.html</WebsiteUrl>
+    <UserAgent>Poo</UserAgent>
+    <UserNotes />
+    <LastFileSize>358912</LastFileSize>
+    <LastFileDate>2018-11-06T15:28:38.3541527</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>true</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer>http://www.sourceforge.org</HttpReferer>
+    <SetupInstructions>
+      <SetupInstruction xsi:type="StartProcessInstruction">
+        <EnvironmentVariables />
+        <FileName>downloads\Notepad2_{version}_x64.exe</FileName>
+        <Parameters>/SILENT</Parameters>
+        <WaitForExit>true</WaitForExit>
+      </SetupInstruction>
+    </SetupInstructions>
+    <Variables>
+      <item>
+        <key>
+          <string>appcat</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>{appname:regexreplace: \(.*\):}</TextualContent>
+            <Name>appcat</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>appfile</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>{appname:multireplace:|:(|)| :|_|_}</TextualContent>
+            <Name>appfile</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>(?&lt;=Current Release.*?)[0-9.]{2,}</Regex>
+            <Url>http://www.flos-freeware.ch/notepad2.html</Url>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>http://www.flos-freeware.ch/zip/Notepad2_{version}_x64.exe</TextualContent>
+            <Name>url</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand>echo %date% - %time% // {appname} v{version} &gt;&gt; "{file:directory}"\history.txt
+@echo off
+echo *IMPORTANT*
+echo This will kill all open instances of Notepad.
+echo To cancel, end this batch file now (ctrl+c), or hit any key to continue.
+pause
+echo Killing all instances of notepad running...
+TASKKILL /F /IM notepad.exe /T
+echo Backing up...
+call :backup %systemroot%\servicepackfiles\i386
+call :backup %systemroot%
+call :backup %systemroot%\System32
+call :backup %systemroot%\System32\dllcache
+echo Installing...
+copy notepad2.exe %systemroot%\servicepackfiles\i386\notepad.exe /y
+copy notepad2.exe %systemroot%\notepad.exe /y
+copy notepad2.exe %systemroot%\System32\notepad.exe /y
+copy notepad2.exe %systemroot%\System32\dllcache\notepad.exe /y
+echo Done.
+pause
+goto :end
+:backup
+call set npath=%1
+set count=0
+for %%i in (%npath%\notepad.original*.exe) do (
+set nname=%%i
+set /a count=count+1
+)
+echo backing up to %npath%\notepad.original%count%.exe
+copy %npath%\notepad.exe %npath%\notepad.original%count%.exe /y
+:end</ExecuteCommand>
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category>Office</Category>
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Users\mitou\Desktop\++installations++\Ketarin\downloads\Notepad2_4.2.25_x64.exe</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2018-11-06T15:28:38.3541527</LastUpdated>
+    <TargetPath>downloads\</TargetPath>
+    <FixedDownloadUrl>{url}</FixedDownloadUrl>
+    <Name>Notepad2 (en-US Setup 64-bit)</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="63980a80-2781-40a6-bc8d-1c4741a361e4">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>600153</LastFileSize>
+    <LastFileDate>2018-11-06T15:31:40.4634775</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions>
+      <SetupInstruction xsi:type="StartProcessInstruction">
+        <EnvironmentVariables />
+        <FileName>downloads\Notepad2_x64.exe</FileName>
+        <Parameters>SILENT</Parameters>
+        <WaitForExit>true</WaitForExit>
+      </SetupInstruction>
+      <SetupInstruction xsi:type="CustomSetupInstruction">
+        <Code>echo %date% - %time% // {appname} v{version} &gt;&gt; "{file:directory}"\history.txt
+@echo off
+echo *IMPORTANT*
+echo This will kill all open instances of Notepad.
+echo To cancel, end this batch file now (ctrl+c), or hit any key to continue.
+pause
+echo Killing all instances of notepad running...
+TASKKILL /F /IM notepad.exe /T
+echo Backing up...
+call :backup %systemroot%\servicepackfiles\i386
+call :backup %systemroot%
+call :backup %systemroot%\System32
+call :backup %systemroot%\System32\dllcache
+echo Installing...
+copy notepad2.exe %systemroot%\servicepackfiles\i386\notepad.exe /y
+copy notepad2.exe %systemroot%\notepad.exe /y
+copy notepad2.exe %systemroot%\System32\notepad.exe /y
+copy notepad2.exe %systemroot%\System32\dllcache\notepad.exe /y
+echo Done.
+pause
+goto :end
+:backup
+call set npath=%1
+set count=0
+for %%i in (%npath%\notepad.original*.exe) do (
+set nname=%%i
+set /a count=count+1
+)
+echo backing up to %npath%\notepad.original%count%.exe
+copy %npath%\notepad.exe %npath%\notepad.original%count%.exe /y
+:end</Code>
+        <Type>Batch</Type>
+      </SetupInstruction>
+    </SetupInstructions>
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>https://www.adam-bryan.fr/index.php/notepad2</Url>
+            <StartText>&lt;p&gt;Version : </StartText>
+            <EndText>&lt;/p</EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand>Expand-Archive -Path downloads\notepad2_4.2.25_fr_www.adam-bryan.fr.zip -DestinationPath downloads\</ExecuteCommand>
+    <ExecutePreCommand />
+    <ExecuteCommandType>PowerShell</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category>Office</Category>
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Users\mitou\Desktop\++installations++\Ketarin\downloads\notepad2_4.2.25_fr_www.adam-bryan.fr.zip</PreviousLocation>
+    <DeletePreviousFile>false</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2018-11-06T15:31:40.4634775</LastUpdated>
+    <TargetPath>downloads\</TargetPath>
+    <FixedDownloadUrl>https://www.adam-bryan.fr/php/telechargement.php/notepad2_{version}_fr_www.adam-bryan.fr.zip</FixedDownloadUrl>
+    <Name>Notepad2 fr</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="dadfad23-ee08-4e6c-99ad-166cebf81ff8">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>0</LastFileSize>
+    <LastFileDate xsi:nil="true" />
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions>
+      <SetupInstruction xsi:type="StartProcessInstruction">
+        <EnvironmentVariables />
+        <FileName>downloads\</FileName>
+        <Parameters />
+        <WaitForExit>true</WaitForExit>
+      </SetupInstruction>
+    </SetupInstructions>
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>https://sourceforge.net/projects/projectlibre/files/ProjectLibre/</Url>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation />
+    <DeletePreviousFile>false</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated xsi:nil="true" />
+    <TargetPath>downloads\</TargetPath>
+    <FixedDownloadUrl>https://sourceforge.net/projects/projectlibre/files/ProjectLibre/{version}/ProjectLibre-{version}.exe/download</FixedDownloadUrl>
+    <Name>Projectlibre</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="c8dcdc40-1c54-426d-b6e6-e438651b26c0">
+    <WebsiteUrl />
+    <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0</UserAgent>
+    <UserNotes />
+    <LastFileSize>4573535</LastFileSize>
+    <LastFileDate>2018-11-06T15:55:09.2710769</LastFileDate>
+    <IgnoreFileInformation>true</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator>nopush</VariableChangeIndicator>
+    <HashVariable />
+    <HashType>None</HashType>
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer>http://www.fiastarta.com</HttpReferer>
+    <SetupInstructions>
+      <SetupInstruction xsi:type="StartProcessInstruction">
+        <EnvironmentVariables />
+        <FileName>C:\Users\mitou\Desktop\++installations++\Ketarin\downloads\PrtScrSetup.exe</FileName>
+        <Parameters>/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-</Parameters>
+        <WaitForExit>true</WaitForExit>
+      </SetupInstruction>
+    </SetupInstructions>
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex>Last program version.*?([\d\.]+)</Regex>
+            <Url>https://www.pcastuces.com/logitheque/prtscr.htm</Url>
+            <StartText>&lt;h1&gt;PrtScr&amp;nbsp;</StartText>
+            <EndText>&lt;/h1&gt;&lt;br&gt;</EndText>
+            <TextualContent>1.7</TextualContent>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category>Utilities</Category>
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Users\mitou\Desktop\++installations++\Ketarin\downloads\PrtScrSetup.exe</PreviousLocation>
+    <DeletePreviousFile>false</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2018-11-06T15:55:09.2710769</LastUpdated>
+    <TargetPath>downloads\</TargetPath>
+    <FixedDownloadUrl>http://www.fiastarta.com/PrtScr/PrtScrSetup.exe</FixedDownloadUrl>
+    <Name>PrtScr</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="9529c027-e32d-4f7f-b1fa-27c735acf462">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>786952</LastFileSize>
+    <LastFileDate>2018-11-17T19:09:52.1329303</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions>
+      <SetupInstruction xsi:type="StartProcessInstruction">
+        <EnvironmentVariables />
+        <FileName>downloads\</FileName>
+        <Parameters />
+        <WaitForExit>true</WaitForExit>
+      </SetupInstruction>
+    </SetupInstructions>
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://www.pegtop.net/download.php?file=start</Url>
+            <StartText>&lt;b&gt;PStart&lt;/b&gt; </StartText>
+            <EndText>&lt;br&gt;</EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>version+</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://www.pegtop.net/download.php?file=start</Url>
+            <StartText>/files/PStartSetup</StartText>
+            <EndText>.exe</EndText>
+            <Name>version+</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Users\mitou\Desktop\++installations++\Ketarin\downloads\PStartSetup211.exe</PreviousLocation>
+    <DeletePreviousFile>false</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2018-11-17T19:09:52.1329303</LastUpdated>
+    <TargetPath>downloads\</TargetPath>
+    <FixedDownloadUrl>http://www.pegtop.net/files/PStartSetup{version+}.exe</FixedDownloadUrl>
+    <Name>Pstart</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="66db53b1-660f-43af-b738-605d22ff6b1b">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>929828</LastFileSize>
+    <LastFileDate>2018-11-20T15:53:55.0729055</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions>
+      <SetupInstruction xsi:type="StartProcessInstruction">
+        <EnvironmentVariables />
+        <FileName>downloads\sTabLauncher.msi</FileName>
+        <Parameters>/passive</Parameters>
+        <WaitForExit>true</WaitForExit>
+      </SetupInstruction>
+    </SetupInstructions>
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://www.stablauncher.com/Downloads/index.html</Url>
+            <StartText>sTabLauncher </StartText>
+            <EndText>&lt;/a&gt;</EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand>Expand-Archive -Path downloads\sTabLauncher.zip -DestinationPath downloads</ExecuteCommand>
+    <ExecutePreCommand />
+    <ExecuteCommandType>PowerShell</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Users\mitou\Desktop\++installations++\Ketarin\downloads\sTabLauncher.zip</PreviousLocation>
+    <DeletePreviousFile>false</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2018-11-20T15:53:55.0729055</LastUpdated>
+    <TargetPath>downloads\</TargetPath>
+    <FixedDownloadUrl>http://stablauncher.com/Downloads/sTabLauncher.zip</FixedDownloadUrl>
+    <Name>STabLauncher</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="250e8fb6-4a88-4743-ba13-3b0641f703a9">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>1969739</LastFileSize>
+    <LastFileDate>2018-11-04T21:16:41.6513921</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions>
+      <SetupInstruction xsi:type="StartProcessInstruction">
+        <EnvironmentVariables />
+        <FileName>downloads\SoftNote2005_Setup.exe</FileName>
+        <Parameters>/verysilent</Parameters>
+        <WaitForExit>true</WaitForExit>
+      </SetupInstruction>
+    </SetupInstructions>
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://www.softchris.com/?page_id=86</Url>
+            <StartText>SoftNote 2005 version </StartText>
+            <EndText> du</EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand>Expand-Archive -Path downloads\softnote2005.zip -DestinationPath downloads\</ExecuteCommand>
+    <ExecutePreCommand />
+    <ExecuteCommandType>PowerShell</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category>Office</Category>
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Users\mitou\Desktop\++ installations ++\Ketarin\Telechargements\softnote2005.zip</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2018-11-04T21:16:41.6513921</LastUpdated>
+    <TargetPath>downloads\</TargetPath>
+    <FixedDownloadUrl>http://www.softchris.com/files/softnote2005.zip</FixedDownloadUrl>
+    <Name>Softnote 2005</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="d05f5f5b-b468-4233-8ed9-bf0df888ef54">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>468493</LastFileSize>
+    <LastFileDate>2018-11-05T17:29:08.332184</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions>
+      <SetupInstruction xsi:type="StartProcessInstruction">
+        <EnvironmentVariables />
+        <FileName>downloads\foobar2000 controller.exe</FileName>
+        <Parameters>/S</Parameters>
+        <WaitForExit>true</WaitForExit>
+      </SetupInstruction>
+    </SetupInstructions>
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>https://www.mediafire.com/file/nd1nbsue5173oc4/foobar2000+controller+%5BPC-side+setup%5D+v2.0.1.exe</Url>
+            <StartText>foobar2000 controller [PC-side setup] v</StartText>
+            <EndText>&lt;/title&gt;</EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>file</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>foobar2000 controller [PC-side setup] v2.0.1.exe</TextualContent>
+            <Name>file</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand>ren "{file}" foobar2000 controller.exe</ExecuteCommand>
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category>Audio (Player)</Category>
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Users\mitou\Desktop\++installations++\Ketarin\downloads\foobar2000 controller [PC-side setup] v2.0.1.exe</PreviousLocation>
+    <DeletePreviousFile>false</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2018-11-05T17:29:08.332184</LastUpdated>
+    <TargetPath>downloads\</TargetPath>
+    <FixedDownloadUrl>http://www.mediafire.com/download/nd1nbsue5173oc4/foobar2000+controller+%5BPC-side+setup%5D+v2.0.1.exe</FixedDownloadUrl>
+    <Name>foobar2000 controller</Name>
+  </ApplicationJob>
+</Jobs>

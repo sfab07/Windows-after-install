@@ -1095,6 +1095,7 @@ copy %npath%\notepad.exe %npath%\notepad.original%count%.exe /y
             <Url>https://www.mediafire.com/file/nd1nbsue5173oc4/foobar2000+controller+%5BPC-side+setup%5D+v2.0.1.exe</Url>
             <StartText>foobar2000 controller [PC-side setup] v</StartText>
             <EndText>&lt;/title&gt;</EndText>
+           
             <Name>version</Name>
           </UrlVariable>
         </value>

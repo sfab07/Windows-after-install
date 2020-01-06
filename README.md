@@ -1,6 +1,6 @@
 # Windows-after-install
 
-Afin d'automatiser une installation le plus simple possible !!!
+Afin d'automatiser une installation le plus simplement possible !!!
 
 Requirements :
 - Ketarin software :  https://ketarin.org/download
